@@ -1,67 +1,72 @@
-# PeriscopeLayout
-A layout with animation like Periscope's
+<h1 align="center">AppUpdater </h1>
 
-一个类似Periscope点赞效果的Layout,效果如下:  
+<p align="center">
+  <a target="_blank" href="https://www.paypal.me/RX1226" title="Donate using PayPal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" /></a>
+</p>
 
-![效果图](img/periscope.gif)  
+This module is reference
+<a href="https://github.com/javiersantos/AppUpdater">javiersantos's AppUpdater</a>
 
-对应的实现文章在这里:[一步一步教你实现Periscope点赞效果
-](http://www.jianshu.com/p/03fdcfd3ae9c)
-
-## Add dependency
-
-### Gradle
-`compile 'me.yifeiyuan.periscopelayout:library:1.0.0'`
-
-### Maven
+## How to use
+1. Add the JitPack repository to your build file:
 ```
-<dependency>
-<groupId>me.yifeiyuan</groupId>
-<artifactId>periscopelayout</artifactId>
-<version>library</version>
-<type>xml</type>
-</dependency>
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
 ```
+2. Add the dependency:
+```
+    dependencies {
+        implementation 'com.github.RX1226:PeriscopeLayout:1.0.0'
+    }
+```
+## Usage
+Add layout in xml
 
-### Eclipse
-呵呵
+
+            <com.github.rx1226.periscopelayout.PeriscopeLayout
+                android:id="@+id/periscope"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
 ## Usage
+Use addHeart to create fly icon
 
-**Step One:**
-
-```
-    <me.yifeiyuan.library.PeriscopeLayout
-        android:id="@+id/periscope"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:text="Hello World!"
-        android:background="#d2d2c9"
-        />
-```
-
-**Step Two:**
-
-```
-        final PeriscopeLayout periscopeLayout = (PeriscopeLayout) findViewById(R.id.periscope);
+        final PeriscopeLayout periscopeLayout = findViewById(R.id.periscope);
         periscopeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 periscopeLayout.addHeart();
             }
         });
-```
 
-## Contributors
+Use setDrawables to set different icons
 
-[junyuecao](https://github.com/junyuecao)
+        // Set customer icon
+        periscopeLayout.setDrawables(getResources().getDrawable(R.mipmap.ic_launcher),
+                getResources().getDrawable(R.mipmap.ic_launcher_round));
+
+Use setPosition to set start position
+
+        periscopeLayout.setPosition(Position.LEFT);
+
+Use startAuto to auto start
+
+        // auto play
+        periscopeLayout.startAuto();
 
 ## License
-	Copyright (C) 2015, 程序亦非猿
+	Copyright 2018 RX1226
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	  http://www.apache.org/licenses/LICENSE-2.0
+
+	   http://www.apache.org/licenses/LICENSE-2.0
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
