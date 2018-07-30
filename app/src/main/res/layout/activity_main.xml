@@ -9,6 +9,9 @@
     <com.github.rx1226.periscopelayout.PeriscopeLayout
         android:id="@+id/periscope"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:size="200"
+        app:position="right"
+        app:auto="true"/>
 
 </LinearLayout>

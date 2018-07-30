@@ -24,11 +24,13 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
@@ -37,8 +39,6 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
-import com.github.rx1226.appupdater.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,17 +74,34 @@ public class PeriscopeLayout extends RelativeLayout {
     public PeriscopeLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
+        setAttr(context, attrs);
     }
 
     public PeriscopeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
+        setAttr(context, attrs);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public PeriscopeLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
+        setAttr(context, attrs);
+    }
+
+    @SuppressWarnings("SuspiciousNameCombination")
+    private void setAttr(Context context, AttributeSet attrs){
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PeriscopeLayout);
+        boolean enableAuto = array.getBoolean(R.styleable.PeriscopeLayout_auto, false);
+        if(enableAuto) startAuto();
+        int size = array.getInteger(R.styleable.PeriscopeLayout_size, 0);
+        if(size > 0){
+            setFixSize(size, size);
+        }
+        int position = array.getInteger(R.styleable.PeriscopeLayout_position, 0);
+        if(size != 0) setPosition(position);
+        array.recycle();
     }
 
     private List<FlyImage> flyImages;
@@ -111,7 +128,7 @@ public class PeriscopeLayout extends RelativeLayout {
                 getResources().getDrawable(R.drawable.pl_yellow),
                 getResources().getDrawable(R.drawable.pl_blue)
         };
-        position = Position.RIGHT;
+        position = Position.CENTER;
         setDrawables(drawables);
     }
 

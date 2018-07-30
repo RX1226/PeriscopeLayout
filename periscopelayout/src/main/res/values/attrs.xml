@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PeriscopeLayout">
+        <attr name="auto" format="boolean"/>
+        <attr name="size"/>
+        <attr name="position">
+            <enum name="right" value="11" />
+            <enum name="center" value="14" />
+            <enum name="left" value="9" />
+        </attr>
+    </declare-styleable>
+</resources>

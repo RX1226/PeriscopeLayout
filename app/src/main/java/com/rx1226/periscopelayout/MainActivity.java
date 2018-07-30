@@ -6,7 +6,6 @@ import android.view.View;
 
 import com.github.rx1226.periscopelayout.PeriscopeLayout;
 import com.github.rx1226.periscopelayout.Position;
-import com.rx1226.appupdater.R;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -26,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         periscopeLayout.setDrawables(getResources().getDrawable(R.mipmap.ic_launcher),
                 getResources().getDrawable(R.mipmap.ic_launcher_round));
 
-        periscopeLayout.setPosition(Position.LEFT);
+//        periscopeLayout.setPosition(Position.LEFT);
 
         // auto play
-        periscopeLayout.startAuto();
+//        periscopeLayout.startAuto();
     }
 }
