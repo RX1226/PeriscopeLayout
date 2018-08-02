@@ -7,6 +7,8 @@
 This module is reference
 <a href="https://github.com/AlanCheen/PeriscopeLayout">AlanCheen/PeriscopeLayout</a>
 
+![效果圖](img/periscope.gif)  
+
 ## How to use
 1. Add the JitPack repository to your build file:
 ```
@@ -20,7 +22,7 @@ This module is reference
 2. Add the dependency:
 ```
     dependencies {
-        implementation 'com.github.RX1226:PeriscopeLayout:1.0.0'
+        implementation 'com.github.RX1226:PeriscopeLayout:1.0.1'
     }
 ```
 ## Usage
