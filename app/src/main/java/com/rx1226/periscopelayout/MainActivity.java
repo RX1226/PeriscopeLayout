@@ -1,11 +1,11 @@
 package com.rx1226.periscopelayout;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.rx1226.periscopelayout.PeriscopeLayout;
-import com.github.rx1226.periscopelayout.Position;
 
 public class MainActivity extends AppCompatActivity {
     @Override

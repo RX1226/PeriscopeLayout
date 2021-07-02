@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PeriscopeLayout.iml" filepath="$PROJECT_DIR$/PeriscopeLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/periscopelayout/periscopelayout.iml" filepath="$PROJECT_DIR$/periscopelayout/periscopelayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PeriscopeLayout.iml" filepath="$PROJECT_DIR$/.idea/modules/PeriscopeLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PeriscopeLayout.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PeriscopeLayout.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/periscopelayout/PeriscopeLayout.periscopelayout.iml" filepath="$PROJECT_DIR$/.idea/modules/periscopelayout/PeriscopeLayout.periscopelayout.iml" />
     </modules>
   </component>
 </project>
